@@ -74,11 +74,10 @@ body {
     gap: 15px;
     padding: 10px 20px;
     width: fit-content;
+    align-items: center;
 }
 
 .bead-item {
-    width: 60px;
-    height: 60px;
     cursor: grab;
     transition: transform 0.2s, box-shadow 0.2s;
     position: relative;
@@ -86,6 +85,21 @@ body {
         inset -5px -5px 10px rgba(255, 255, 255, 0.7),
         inset 5px 5px 10px rgba(0, 0, 0, 0.2),
         2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.bead-item.bead-small {
+    width: 40px;
+    height: 40px;
+}
+
+.bead-item.bead-medium {
+    width: 60px;
+    height: 60px;
+}
+
+.bead-item.bead-large {
+    width: 80px;
+    height: 80px;
 }
 
 .bead-item.bead-circle {
@@ -97,15 +111,29 @@ body {
 }
 
 .bead-item.bead-triangle {
-    width: 0;
-    height: 0;
-    border-left: 30px solid transparent;
-    border-right: 30px solid transparent;
-    border-bottom: 52px solid;
+    width: 0 !important;
+    height: 0 !important;
     background: none !important;
     box-shadow: none !important;
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
-    border-bottom-color: var(--bead-color);
+}
+
+.bead-item.bead-triangle.bead-small {
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 35px solid;
+}
+
+.bead-item.bead-triangle.bead-medium {
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 52px solid;
+}
+
+.bead-item.bead-triangle.bead-large {
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 70px solid;
 }
 
 .bead-item.bead-hexagon {

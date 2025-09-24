@@ -1,20 +1,35 @@
 const BEAD_TYPES = [
-    { name: 'ruby', shape: 'circle', color: '#e74c3c', gradient: ['#c0392b', '#e74c3c', '#ff6b6b'] },
-    { name: 'sapphire', shape: 'circle', color: '#3498db', gradient: ['#2874a6', '#3498db', '#5dade2'] },
-    { name: 'emerald', shape: 'circle', color: '#2ecc71', gradient: ['#239b56', '#2ecc71', '#58d68d'] },
-    { name: 'amethyst', shape: 'circle', color: '#9b59b6', gradient: ['#7d3c98', '#9b59b6', '#bb8fce'] },
-    { name: 'topaz', shape: 'circle', color: '#f39c12', gradient: ['#d68910', '#f39c12', '#f5b041'] },
-    { name: 'pearl', shape: 'circle', color: '#ecf0f1', gradient: ['#bfc9ca', '#ecf0f1', '#ffffff'] },
-    { name: 'onyx', shape: 'square', color: '#2c3e50', gradient: ['#1a1a1a', '#2c3e50', '#34495e'] },
-    { name: 'rose', shape: 'square', color: '#ff69b4', gradient: ['#ff1493', '#ff69b4', '#ffb6c1'] },
-    { name: 'jade', shape: 'square', color: '#00a86b', gradient: ['#008856', '#00a86b', '#00c878'] },
-    { name: 'coral', shape: 'triangle', color: '#ff7f50', gradient: ['#ff6347', '#ff7f50', '#ffa07a'] },
-    { name: 'turquoise', shape: 'triangle', color: '#40e0d0', gradient: ['#00ced1', '#40e0d0', '#48d1cc'] },
-    { name: 'gold', shape: 'triangle', color: '#ffd700', gradient: ['#ffb900', '#ffd700', '#ffed4e'] },
-    { name: 'silver', shape: 'hexagon', color: '#c0c0c0', gradient: ['#a8a8a8', '#c0c0c0', '#d3d3d3'] },
-    { name: 'bronze', shape: 'hexagon', color: '#cd7f32', gradient: ['#b8682a', '#cd7f32', '#d4994f'] },
-    { name: 'obsidian', shape: 'star', color: '#3d3d3d', gradient: ['#1a1a1a', '#3d3d3d', '#4d4d4d'] },
-    { name: 'crystal', shape: 'star', color: '#e0e0ff', gradient: ['#c0c0ff', '#e0e0ff', '#f0f0ff'] }
+    // Small beads
+    { name: 'ruby-small', shape: 'circle', size: 'small', color: '#e74c3c', gradient: ['#c0392b', '#e74c3c', '#ff6b6b'] },
+    { name: 'sapphire-small', shape: 'circle', size: 'small', color: '#3498db', gradient: ['#2874a6', '#3498db', '#5dade2'] },
+    { name: 'emerald-small', shape: 'circle', size: 'small', color: '#2ecc71', gradient: ['#239b56', '#2ecc71', '#58d68d'] },
+    { name: 'onyx-small', shape: 'square', size: 'small', color: '#2c3e50', gradient: ['#1a1a1a', '#2c3e50', '#34495e'] },
+    { name: 'coral-small', shape: 'triangle', size: 'small', color: '#ff7f50', gradient: ['#ff6347', '#ff7f50', '#ffa07a'] },
+
+    // Medium beads
+    { name: 'ruby', shape: 'circle', size: 'medium', color: '#e74c3c', gradient: ['#c0392b', '#e74c3c', '#ff6b6b'] },
+    { name: 'sapphire', shape: 'circle', size: 'medium', color: '#3498db', gradient: ['#2874a6', '#3498db', '#5dade2'] },
+    { name: 'emerald', shape: 'circle', size: 'medium', color: '#2ecc71', gradient: ['#239b56', '#2ecc71', '#58d68d'] },
+    { name: 'amethyst', shape: 'circle', size: 'medium', color: '#9b59b6', gradient: ['#7d3c98', '#9b59b6', '#bb8fce'] },
+    { name: 'topaz', shape: 'circle', size: 'medium', color: '#f39c12', gradient: ['#d68910', '#f39c12', '#f5b041'] },
+    { name: 'pearl', shape: 'circle', size: 'medium', color: '#ecf0f1', gradient: ['#bfc9ca', '#ecf0f1', '#ffffff'] },
+    { name: 'onyx', shape: 'square', size: 'medium', color: '#2c3e50', gradient: ['#1a1a1a', '#2c3e50', '#34495e'] },
+    { name: 'rose', shape: 'square', size: 'medium', color: '#ff69b4', gradient: ['#ff1493', '#ff69b4', '#ffb6c1'] },
+    { name: 'jade', shape: 'square', size: 'medium', color: '#00a86b', gradient: ['#008856', '#00a86b', '#00c878'] },
+    { name: 'coral', shape: 'triangle', size: 'medium', color: '#ff7f50', gradient: ['#ff6347', '#ff7f50', '#ffa07a'] },
+    { name: 'turquoise', shape: 'triangle', size: 'medium', color: '#40e0d0', gradient: ['#00ced1', '#40e0d0', '#48d1cc'] },
+    { name: 'gold', shape: 'triangle', size: 'medium', color: '#ffd700', gradient: ['#ffb900', '#ffd700', '#ffed4e'] },
+    { name: 'silver', shape: 'hexagon', size: 'medium', color: '#c0c0c0', gradient: ['#a8a8a8', '#c0c0c0', '#d3d3d3'] },
+    { name: 'bronze', shape: 'hexagon', size: 'medium', color: '#cd7f32', gradient: ['#b8682a', '#cd7f32', '#d4994f'] },
+    { name: 'obsidian', shape: 'star', size: 'medium', color: '#3d3d3d', gradient: ['#1a1a1a', '#3d3d3d', '#4d4d4d'] },
+    { name: 'crystal', shape: 'star', size: 'medium', color: '#e0e0ff', gradient: ['#c0c0ff', '#e0e0ff', '#f0f0ff'] },
+
+    // Large beads
+    { name: 'ruby-large', shape: 'circle', size: 'large', color: '#e74c3c', gradient: ['#c0392b', '#e74c3c', '#ff6b6b'] },
+    { name: 'amethyst-large', shape: 'circle', size: 'large', color: '#9b59b6', gradient: ['#7d3c98', '#9b59b6', '#bb8fce'] },
+    { name: 'pearl-large', shape: 'circle', size: 'large', color: '#ecf0f1', gradient: ['#bfc9ca', '#ecf0f1', '#ffffff'] },
+    { name: 'silver-large', shape: 'hexagon', size: 'large', color: '#c0c0c0', gradient: ['#a8a8a8', '#c0c0c0', '#d3d3d3'] },
+    { name: 'obsidian-large', shape: 'star', size: 'large', color: '#3d3d3d', gradient: ['#1a1a1a', '#3d3d3d', '#4d4d4d'] }
 ];
 
 const BRACELET_SLOTS = 20;
@@ -77,7 +92,7 @@ class BraceletApp {
 
         BEAD_TYPES.forEach((bead, index) => {
             const beadElement = document.createElement('div');
-            beadElement.className = `bead-item bead-${bead.shape}`;
+            beadElement.className = `bead-item bead-${bead.shape} bead-${bead.size}`;
             beadElement.dataset.beadIndex = index;
 
             if (bead.shape === 'circle' || bead.shape === 'square' || bead.shape === 'hexagon' || bead.shape === 'star') {
@@ -348,6 +363,14 @@ class BraceletApp {
 
             const slot = this.beadSlots[index];
 
+            // Calculate bead size based on size property
+            let beadRadius = this.beadRadius;
+            if (bead.size === 'small') {
+                beadRadius = this.beadRadius * 0.6;
+            } else if (bead.size === 'large') {
+                beadRadius = this.beadRadius * 1.4;
+            }
+
             this.ctx.save();
             this.ctx.shadowColor = 'rgba(0, 0, 0, 0.3)';
             this.ctx.shadowBlur = 5;
@@ -356,22 +379,22 @@ class BraceletApp {
 
             if (bead.shape === 'circle') {
                 const gradient = this.ctx.createRadialGradient(
-                    slot.x - 5, slot.y - 5, 0,
-                    slot.x, slot.y, this.beadRadius
+                    slot.x - beadRadius * 0.3, slot.y - beadRadius * 0.3, 0,
+                    slot.x, slot.y, beadRadius
                 );
                 gradient.addColorStop(0, bead.gradient[2]);
                 gradient.addColorStop(0.5, bead.gradient[1]);
                 gradient.addColorStop(1, bead.gradient[0]);
 
                 this.ctx.beginPath();
-                this.ctx.arc(slot.x, slot.y, this.beadRadius, 0, Math.PI * 2);
+                this.ctx.arc(slot.x, slot.y, beadRadius, 0, Math.PI * 2);
                 this.ctx.fillStyle = gradient;
                 this.ctx.fill();
 
-                this.drawHighlight(slot.x - 5, slot.y - 5, this.beadRadius * 0.3);
+                this.drawHighlight(slot.x - beadRadius * 0.3, slot.y - beadRadius * 0.3, beadRadius * 0.3);
 
             } else if (bead.shape === 'square') {
-                const size = this.beadRadius * 1.5;
+                const size = beadRadius * 1.5;
                 const gradient = this.ctx.createRadialGradient(
                     slot.x, slot.y, 0,
                     slot.x, slot.y, size
@@ -388,15 +411,15 @@ class BraceletApp {
             } else if (bead.shape === 'triangle') {
                 this.ctx.translate(slot.x, slot.y);
 
-                const gradient = this.ctx.createLinearGradient(0, -this.beadRadius, 0, this.beadRadius);
+                const gradient = this.ctx.createLinearGradient(0, -beadRadius, 0, beadRadius);
                 gradient.addColorStop(0, bead.gradient[2]);
                 gradient.addColorStop(0.5, bead.gradient[1]);
                 gradient.addColorStop(1, bead.gradient[0]);
 
                 this.ctx.beginPath();
-                this.ctx.moveTo(0, -this.beadRadius);
-                this.ctx.lineTo(-this.beadRadius, this.beadRadius);
-                this.ctx.lineTo(this.beadRadius, this.beadRadius);
+                this.ctx.moveTo(0, -beadRadius);
+                this.ctx.lineTo(-beadRadius, beadRadius);
+                this.ctx.lineTo(beadRadius, beadRadius);
                 this.ctx.closePath();
                 this.ctx.fillStyle = gradient;
                 this.ctx.fill();
@@ -404,7 +427,7 @@ class BraceletApp {
             } else if (bead.shape === 'hexagon') {
                 this.ctx.translate(slot.x, slot.y);
 
-                const gradient = this.ctx.createRadialGradient(0, 0, 0, 0, 0, this.beadRadius);
+                const gradient = this.ctx.createRadialGradient(0, 0, 0, 0, 0, beadRadius);
                 gradient.addColorStop(0, bead.gradient[2]);
                 gradient.addColorStop(0.5, bead.gradient[1]);
                 gradient.addColorStop(1, bead.gradient[0]);
@@ -412,8 +435,8 @@ class BraceletApp {
                 this.ctx.beginPath();
                 for (let i = 0; i < 6; i++) {
                     const angle = (Math.PI / 3) * i;
-                    const x = this.beadRadius * Math.cos(angle);
-                    const y = this.beadRadius * Math.sin(angle);
+                    const x = beadRadius * Math.cos(angle);
+                    const y = beadRadius * Math.sin(angle);
                     if (i === 0) this.ctx.moveTo(x, y);
                     else this.ctx.lineTo(x, y);
                 }
@@ -424,14 +447,14 @@ class BraceletApp {
             } else if (bead.shape === 'star') {
                 this.ctx.translate(slot.x, slot.y);
 
-                const gradient = this.ctx.createRadialGradient(0, 0, 0, 0, 0, this.beadRadius);
+                const gradient = this.ctx.createRadialGradient(0, 0, 0, 0, 0, beadRadius);
                 gradient.addColorStop(0, bead.gradient[2]);
                 gradient.addColorStop(0.5, bead.gradient[1]);
                 gradient.addColorStop(1, bead.gradient[0]);
 
                 this.ctx.beginPath();
                 for (let i = 0; i < 10; i++) {
-                    const radius = i % 2 === 0 ? this.beadRadius : this.beadRadius * 0.5;
+                    const radius = i % 2 === 0 ? beadRadius : beadRadius * 0.5;
                     const angle = (Math.PI / 5) * i - Math.PI / 2;
                     const x = radius * Math.cos(angle);
                     const y = radius * Math.sin(angle);
