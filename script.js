@@ -335,20 +335,35 @@ class BraceletApp {
             this.centerX, this.centerY, this.baseRadius * 0.5,
             this.centerX, this.centerY, this.baseRadius
         );
-        gradient.addColorStop(0, '#a0522d');
-        gradient.addColorStop(0.5, '#8b4513');
-        gradient.addColorStop(1, '#654321');
+        gradient.addColorStop(0, '#e5c08f');
+        gradient.addColorStop(0.3, '#d9b37f');
+        gradient.addColorStop(0.6, '#cda16f');
+        gradient.addColorStop(1, '#b8925c');
 
         this.ctx.fillStyle = gradient;
         this.ctx.fill();
 
-        this.ctx.strokeStyle = '#5c3317';
+        // Add wood texture lines
+        this.ctx.strokeStyle = 'rgba(139, 105, 20, 0.1)';
+        this.ctx.lineWidth = 0.5;
+        for (let i = 0; i < 8; i++) {
+            const offset = (i * 20) - 80;
+            this.ctx.beginPath();
+            this.ctx.arc(this.centerX, this.centerY, this.baseRadius * 0.9 + offset, Math.PI * 0.2, Math.PI * 0.8);
+            this.ctx.stroke();
+        }
+
+        // Outer ring
+        this.ctx.beginPath();
+        this.ctx.arc(this.centerX, this.centerY, this.baseRadius, 0, Math.PI * 2);
+        this.ctx.strokeStyle = '#a88a5b';
         this.ctx.lineWidth = 3;
         this.ctx.stroke();
 
+        // Inner ring for depth
         this.ctx.beginPath();
         this.ctx.arc(this.centerX, this.centerY, this.baseRadius * 0.85, 0, Math.PI * 2);
-        this.ctx.strokeStyle = '#7a5230';
+        this.ctx.strokeStyle = '#dbb88a';
         this.ctx.lineWidth = 1;
         this.ctx.stroke();
     }
